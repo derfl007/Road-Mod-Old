@@ -1,0 +1,16 @@
+[
+{
+  "modid": "roads",
+  "name": "Roads Mod",
+  "description": "Roads Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["derfl007"],
+  "credits": "derfl007",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

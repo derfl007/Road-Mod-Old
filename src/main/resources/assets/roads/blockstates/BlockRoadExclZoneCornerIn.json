@@ -1,0 +1,30 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "roads:road_excl_zone_base",
+        "uvlock": true
+    },
+    "variants": {
+        "facing": {
+            "north": {
+                "submodel": "roads:road_excl_zone_corner_in",
+                "uvlock": false
+            },
+            "east": {
+                "submodel": "roads:road_excl_zone_corner_in",
+                "y": 90,
+                "uvlock": false
+            },
+            "south": {
+                "submodel": "roads:road_excl_zone_corner_in",
+                "y": 180,
+                "uvlock": false
+            },
+            "west": {
+                "submodel": "roads:road_excl_zone_corner_in",
+                "y": 270,
+                "uvlock": false
+            }
+        }
+    }
+}

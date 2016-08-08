@@ -1,0 +1,64 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "facing": {
+            "north": {
+                "model": "roads:road_sign_prohib_10a_20",
+                "uvlock": false
+            },
+            "east": {
+                "model": "roads:road_sign_prohib_10a_20",
+                "y": 90,
+                "uvlock": false
+            },
+            "south": {
+                "model": "roads:road_sign_prohib_10a_20",
+                "y": 180,
+                "uvlock": false
+            },
+            "west": {
+                "model": "roads:road_sign_prohib_10a_20",
+                "y": 270,
+                "uvlock": false
+            }
+        },
+        "down": {
+            "true": {
+                "submodel": {
+                    "post_down": {
+                        "model": "roads:road_sign_connector",
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "up": {
+            "true": {
+                "submodel": {
+                    "post_up": {
+                        "model": "roads:road_sign_connector",
+                        "x": 180,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "inventory": [
+            {
+                "submodel": {
+                    "post_north": {
+                        "model": "roads:road_sign_prohib_10a_20",
+                        "uvlock": true
+                    },
+                    "post_south": {
+                        "model": "roads:road_sign_prohib_10a_20",
+                        "y": 180,
+                        "uvlock": true
+                    }
+                }
+            }
+        ]
+    }
+}
