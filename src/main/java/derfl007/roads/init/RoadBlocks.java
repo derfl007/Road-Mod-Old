@@ -110,7 +110,8 @@ public class RoadBlocks {
 			road_sign_info_16b, // detour left
 			road_sign_info_23, // two lanes merge into one
 			road_guardrail, //
-			road_sidewalk_curb;
+			road_sidewalk_curb, //
+			road_lantern;
 
 	public static void init() {
 		road = new BlockRoad();
@@ -215,6 +216,7 @@ public class RoadBlocks {
 		road_sign_info_23 = new BlockRoadSignInfo23();
 		road_guardrail = new BlockRoadGuardrail();
 		road_sidewalk_curb = new BlockRoadSidewalkCurb();
+		road_lantern = new BlockRoadLantern();
 	}
 
 	public static void register() {
@@ -320,6 +322,7 @@ public class RoadBlocks {
 		registerBlock(road_sign_info_23);
 		registerBlock(road_guardrail);
 		registerBlock(road_sidewalk_curb);
+		registerBlock(road_lantern);
 	}
 
 	private static void registerBlock(Block block) {
@@ -432,6 +435,7 @@ public class RoadBlocks {
 		registerRender(road_sign_info_23);
 		registerRender(road_guardrail);
 		registerRender(road_sidewalk_curb);
+		registerRender(road_lantern);
 	}
 
 	private static void registerRender(Block block) {
