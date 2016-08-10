@@ -1,6 +1,5 @@
 package derfl007.roads.blocks;
 
-import derfl007.roads.Reference;
 import derfl007.roads.Roads;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
@@ -13,9 +12,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockRoadTrafficLight extends Block {
@@ -37,11 +34,6 @@ public class BlockRoadTrafficLight extends Block {
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
-	}
-
-	@Override
-	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		return Reference.ROAD_BLOCK_AABB;
 	}
 
 	@Override
