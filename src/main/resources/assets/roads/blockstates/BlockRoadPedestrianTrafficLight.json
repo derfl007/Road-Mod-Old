@@ -2,22 +2,22 @@
     "forge_marker": 1,
     "variants": {
         "facing": {
-            "north": {
-                "model": "roads:road_sign_prohib_10b_70",
-                "uvlock": false
-            },
-            "east": {
-                "model": "roads:road_sign_prohib_10b_70",
-                "y": 90,
-                "uvlock": false
-            },
             "south": {
-                "model": "roads:road_sign_prohib_10b_70",
-                "y": 180,
+                "model": "roads:road_pedestrian_traffic_light_1",
                 "uvlock": false
             },
             "west": {
-                "model": "roads:road_sign_prohib_10b_70",
+                "model": "roads:road_pedestrian_traffic_light_2",
+                "y": 90,
+                "uvlock": false
+            },
+            "north": {
+                "model": "roads:road_pedestrian_traffic_light_1",
+                "y": 180,
+                "uvlock": false
+            },
+            "east": {
+                "model": "roads:road_pedestrian_traffic_light_2",
                 "y": 270,
                 "uvlock": false
             }
@@ -45,7 +45,7 @@
             },
             "false": { }
         },
-        "north": {
+        "south": {
             "true": {
                 "submodel": {
                     "post_north": {
@@ -57,7 +57,7 @@
             },
             "false": { }
         },
-        "south": {
+        "north": {
             "true": {
                 "submodel": {
                     "post_south": {
@@ -70,7 +70,7 @@
             },
             "false": { }
         },
-        "east": {
+        "west": {
             "true": {
                 "submodel": {
                     "post_east": {
@@ -83,7 +83,7 @@
             },
             "false": { }
         },
-        "west": {
+        "east": {
             "true": {
                 "submodel": {
                     "post_west": {
@@ -98,17 +98,8 @@
         },
         "inventory": [
             {
-                "submodel": {
-                    "post_north": {
-                        "model": "roads:road_sign_prohib_10b_70",
-                        "uvlock": true
-                    },
-                    "post_south": {
-                        "model": "roads:road_sign_prohib_10b_70",
-                        "y": 180,
-                        "uvlock": true
-                    }
-                }
+                "model": "roads:road_pedestrian_traffic_light_1",
+                "uvlock": true
             }
         ]
     }

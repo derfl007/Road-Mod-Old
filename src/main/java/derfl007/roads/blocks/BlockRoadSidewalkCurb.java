@@ -1,5 +1,12 @@
 package derfl007.roads.blocks;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
+import com.google.common.collect.Lists;
+
+import derfl007.roads.Reference;
 import derfl007.roads.Roads;
 import derfl007.roads.init.RoadBlocks;
 import net.minecraft.block.Block;
@@ -11,11 +18,13 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -23,6 +32,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockRoadSidewalkCurb extends Block {
+
 	public BlockRoadSidewalkCurb() {
 		super(Material.IRON);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE,
@@ -35,6 +45,106 @@ public class BlockRoadSidewalkCurb extends Block {
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
 	public static final PropertyEnum<BlockStairs.EnumShape> SHAPE = PropertyEnum.<BlockStairs.EnumShape>create("shape",
 			BlockStairs.EnumShape.class);
+
+	@Override
+	public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox,
+			List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn) {
+		state = this.getActualState(state, worldIn, pos);
+
+		for (AxisAlignedBB axisalignedbb : getCollisionBoxList(state)) {
+			addCollisionBoxToList(pos, entityBox, collidingBoxes, axisalignedbb);
+		}
+	}
+
+	private static List<AxisAlignedBB> getCollisionBoxList(IBlockState bstate) {
+		List<AxisAlignedBB> list = Lists.<AxisAlignedBB>newArrayList();
+		BlockStairs.EnumShape blocksidewalkcurb$enumshape = bstate.getValue(SHAPE);
+
+		list.add(FULL_BLOCK_AABB);
+
+		if (blocksidewalkcurb$enumshape == BlockStairs.EnumShape.STRAIGHT) {
+			list.add(getStraightShape(bstate));
+		} else if (blocksidewalkcurb$enumshape == BlockStairs.EnumShape.OUTER_LEFT) {
+			list.add(getOuterLeftShape(bstate));
+		} else if (blocksidewalkcurb$enumshape == BlockStairs.EnumShape.OUTER_RIGHT) {
+			list.add(getOuterRightShape(bstate));
+		} else if (blocksidewalkcurb$enumshape == BlockStairs.EnumShape.INNER_LEFT) {
+			list.add(getInnerLeftShape(bstate));
+		} else if (blocksidewalkcurb$enumshape == BlockStairs.EnumShape.INNER_RIGHT) {
+			list.add(getInnerRightShape(bstate));
+		}
+		return list;
+	}
+
+	private static AxisAlignedBB getInnerRightShape(IBlockState bstate) {
+		switch (bstate.getValue(FACING)) {
+		case NORTH:
+		default:
+			return Reference.SC_INNER_NORTH_AABB;
+		case SOUTH:
+			return Reference.SC_INNER_SOUTH_AABB;
+		case WEST:
+			return Reference.SC_INNER_WEST_AABB;
+		case EAST:
+			return Reference.SC_INNER_EAST_AABB;
+		}
+	}
+
+	private static AxisAlignedBB getInnerLeftShape(IBlockState bstate) {
+		switch (bstate.getValue(FACING)) {
+		case NORTH:
+		default:
+			return Reference.SC_INNER_WEST_AABB;
+		case SOUTH:
+			return Reference.SC_INNER_EAST_AABB;
+		case WEST:
+			return Reference.SC_INNER_SOUTH_AABB;
+		case EAST:
+			return Reference.SC_INNER_NORTH_AABB;
+		}
+	}
+
+	private static AxisAlignedBB getOuterRightShape(IBlockState bstate) {
+		switch (bstate.getValue(FACING)) {
+		case NORTH:
+		default:
+			return Reference.SC_STRAIGHT_EAST_AABB;
+		case SOUTH:
+			return Reference.SC_STRAIGHT_WEST_AABB;
+		case WEST:
+			return Reference.SC_STRAIGHT_NORTH_AABB;
+		case EAST:
+			return Reference.SC_STRAIGHT_SOUTH_AABB;
+		}
+	}
+
+	private static AxisAlignedBB getOuterLeftShape(IBlockState bstate) {
+		switch (bstate.getValue(FACING)) {
+		case NORTH:
+		default:
+			return Reference.SC_STRAIGHT_WEST_AABB;
+		case SOUTH:
+			return Reference.SC_STRAIGHT_EAST_AABB;
+		case WEST:
+			return Reference.SC_STRAIGHT_SOUTH_AABB;
+		case EAST:
+			return Reference.SC_STRAIGHT_NORTH_AABB;
+		}
+	}
+
+	private static AxisAlignedBB getStraightShape(IBlockState bstate) {
+		switch (bstate.getValue(FACING)) {
+		case NORTH:
+		default:
+			return Reference.SC_STRAIGHT_NORTH_AABB;
+		case SOUTH:
+			return Reference.SC_STRAIGHT_SOUTH_AABB;
+		case WEST:
+			return Reference.SC_STRAIGHT_EAST_AABB;
+		case EAST:
+			return Reference.SC_STRAIGHT_WEST_AABB;
+		}
+	}
 
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {

@@ -92,6 +92,7 @@ tile.road_guardrail.name=Guardrail
 tile.road_guardrail.name=Guardrail
 tile.road_lantern.name=Lantern
 tile.road_traffic_light.name=Traffic Lights
+tile.road_pedestrian_traffic_light.name=Pedestrian Traffic Lights
 tile.road_excl_zone.name=Exclusion Zone Block
 tile.road_excl_zone_line.name=Exclusion Zone with straight Line
 tile.road_excl_zone_corner_in.name=Exclusion Zone with inner Corner
