@@ -3,21 +3,21 @@
     "variants": {
         "facing": {
             "south": {
-                "model": "roads:road_pedestrian_traffic_light_1",
+                "model": "roads:road_pedestrian_traffic_light_2",
                 "uvlock": false
             },
             "west": {
-                "model": "roads:road_pedestrian_traffic_light_2",
+                "model": "roads:road_pedestrian_traffic_light_1",
                 "y": 90,
                 "uvlock": false
             },
             "north": {
-                "model": "roads:road_pedestrian_traffic_light_1",
+                "model": "roads:road_pedestrian_traffic_light_2",
                 "y": 180,
                 "uvlock": false
             },
             "east": {
-                "model": "roads:road_pedestrian_traffic_light_2",
+                "model": "roads:road_pedestrian_traffic_light_1",
                 "y": 270,
                 "uvlock": false
             }
