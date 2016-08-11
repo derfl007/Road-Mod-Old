@@ -1,6 +1,5 @@
 package derfl007.roads.blocks;
 
-import derfl007.roads.Reference;
 import derfl007.roads.Roads;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
@@ -10,32 +9,21 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockRoadExclZoneLine extends Block {
-	public BlockRoadExclZoneLine() {
+public class BlockRoadFullRotatable extends Block {
+	public BlockRoadFullRotatable(String unlocalizedName, String registryName) {
 		super(Material.CLOTH);
-		setUnlocalizedName("road_excl_zone_line");
-		setRegistryName("BlockRoadExclZoneLine");
+		setUnlocalizedName(unlocalizedName);
+		setRegistryName(registryName);
 		setCreativeTab(Roads.ROADS_TAB);
 	}
 
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.CUTOUT;
-	}
 
 	@Override
 	public boolean isFullCube(IBlockState state) {
@@ -46,11 +34,6 @@ public class BlockRoadExclZoneLine extends Block {
 	public boolean isOpaqueCube(IBlockState state) {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	@Override
-	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		return Reference.ROAD_BLOCK_AABB;
 	}
 
 	@Override
