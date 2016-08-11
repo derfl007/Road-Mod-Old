@@ -138,18 +138,16 @@ public class BlockRoadSign extends Block {
 		Block block = iblockstate.getBlock();
 		String blockname = block.getRegistryName().toString();
 		try {
-			System.out.println(blockname.substring(6, 19));
-			if (blockname.substring(6, 19).equals("BlockRoadSign") || block == RoadBlocks.road_traffic_light) {
-				System.out.println("true");
+			if (blockname.substring(6, 19).equals("BlockRoadSign") || block == RoadBlocks.road_traffic_light
+					|| block == RoadBlocks.road_pedestrian_traffic_light) {
 				return true;
 			} else {
-				System.out.println("false");
 				return false;
 			}
 		} catch (StringIndexOutOfBoundsException e) {
 			// TODO: handle exception
 			System.out.println("Index out of bounds!");
-			if (block == RoadBlocks.road_traffic_light) {
+			if (block == RoadBlocks.road_traffic_light || block == RoadBlocks.road_pedestrian_traffic_light) {
 				return true;
 			} else {
 				return false;

@@ -1,7 +1,6 @@
 package derfl007.roads.init;
 
 import derfl007.roads.blocks.BlockRoad;
-import derfl007.roads.blocks.BlockRoadFullRotatable;
 import derfl007.roads.blocks.BlockRoadGuardrail;
 import derfl007.roads.blocks.BlockRoadLantern;
 import derfl007.roads.blocks.BlockRoadLine;
@@ -229,8 +228,8 @@ public class RoadBlocks {
 		road_guardrail = new BlockRoadGuardrail();
 		road_sidewalk_curb = new BlockRoadSidewalkCurb();
 		road_lantern = new BlockRoadLantern();
-		road_traffic_light = new BlockRoadFullRotatable("road_traffic_light", "BlockRoadTrafficLight");
-		road_pedestrian_traffic_light = new BlockRoadFullRotatable("road_pedestrian_traffic_light",
+		road_traffic_light = new BlockRoadSign("road_traffic_light", "BlockRoadTrafficLight");
+		road_pedestrian_traffic_light = new BlockRoadSign("road_pedestrian_traffic_light",
 				"BlockRoadPedestrianTrafficLight");
 	}
 

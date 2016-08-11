@@ -77,21 +77,6 @@
 				}
 			},
 			"false": { }
-		},
-		"inventory": [
-			{
-				"submodel": {
-					"post_north": {
-						"model": "roads:road_sign_connector",
-						"uvlock": true
-					},
-					"post_south": {
-						"model": "roads:road_sign_connector",
-						"y": 180,
-						"uvlock": true
-					}
-				}
-			}
-		]
+		}
 	}
 }

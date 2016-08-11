@@ -90,6 +90,7 @@ tile.road_sign_info_23.name=Zwei Spuren führen zu einer zusammen Schild
 tile.road_guardrail.name=Leitschiene
 tile.road_lantern.name=Laterne
 tile.road_traffic_light.name=Ampel
+tile.road_pedestrian_traffic_light.name=Fußgängerampel
 tile.road_excl_zone.name=Speerzone Block
 tile.road_excl_zone_line.name=Speerzone mit gerader Linie
 tile.road_excl_zone_corner_in.name=Speerzone mit innerer Ecke
