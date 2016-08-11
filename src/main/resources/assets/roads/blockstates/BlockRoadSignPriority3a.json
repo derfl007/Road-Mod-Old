@@ -45,6 +45,57 @@
             },
             "false": { }
         },
+        "north": {
+            "true": {
+                "submodel": {
+                    "post_north": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "south": {
+            "true": {
+                "submodel": {
+                    "post_south": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "y": 180,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "east": {
+            "true": {
+                "submodel": {
+                    "post_east": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "y": 90,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "west": {
+            "true": {
+                "submodel": {
+                    "post_west": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "y": 270,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
         "inventory": [
             {
                 "submodel": {
