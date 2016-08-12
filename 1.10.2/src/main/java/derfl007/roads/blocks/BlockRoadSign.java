@@ -145,8 +145,6 @@ public class BlockRoadSign extends Block {
 				return false;
 			}
 		} catch (StringIndexOutOfBoundsException e) {
-			// TODO: handle exception
-			System.out.println("Index out of bounds!");
 			if (block == RoadBlocks.road_traffic_light || block == RoadBlocks.road_pedestrian_traffic_light) {
 				return true;
 			} else {
