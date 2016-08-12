@@ -10,6 +10,7 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
@@ -37,6 +38,12 @@ public class BlockRoadRotatable extends Block {
 	public boolean isOpaqueCube(IBlockState state) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public BlockRenderLayer getBlockLayer() {
+		// TODO Auto-generated method stub
+		return BlockRenderLayer.CUTOUT;
 	}
 
 	@Override
