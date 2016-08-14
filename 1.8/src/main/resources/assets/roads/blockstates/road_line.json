@@ -1,0 +1,81 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "roads:road_line_base"
+    },
+    "variants": {
+        "north": {
+            "true": {
+                "submodel": {
+                    "road_north_white": {
+                        "model": "roads:road_line_north_white",
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": {
+                "submodel": {
+                    "road_north": {
+                        "model": "roads:road_line_north",
+                        "uvlock": true
+                    }
+                } 
+            }
+        },
+        "south": {
+            "true": {
+                "submodel": {
+                    "road_south_white": {
+                        "model": "roads:road_line_south_white",
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": {
+                "submodel": {
+                    "road_south": {
+                        "model": "roads:road_line_south",
+                        "uvlock": true
+                    }
+                }
+            }
+        },
+        "east": {
+            "true": {
+                "submodel": {
+                    "road_east_white": {
+                        "model": "roads:road_line_east_white",
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": {
+                "submodel": {
+                    "road_east": {
+                        "model": "roads:road_line_east",
+                        "uvlock": true
+                    }
+                }
+            }
+        },
+        "west": {
+            "true": {
+                "submodel": {
+                    "road_west_white": {
+                        "model": "roads:road_line_west_white",
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": {
+                "submodel": {
+                    "road_west": {
+                        "model": "roads:road_line_west",
+                        "uvlock": true
+                    }
+                }
+            }
+        },
+        "inventory": [ {} ]
+    }
+}

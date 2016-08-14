@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east":  { "model": "roads:road_lantern", "y": 270  },
+        "facing=west":  { "model": "roads:road_lantern", "y": 90   },
+        "facing=south": { "model": "roads:road_lantern", "y": 0    },
+        "facing=north": { "model": "roads:road_lantern", "y": 180  }
+    }
+}

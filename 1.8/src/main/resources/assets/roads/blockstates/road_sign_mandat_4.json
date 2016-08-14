@@ -1,0 +1,105 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "facing": {
+            "north": {
+                "model": "roads:road_sign_mandat_4",
+                "uvlock": false
+            },
+            "east": {
+                "model": "roads:road_sign_mandat_4",
+                "y": 90,
+                "uvlock": false
+            },
+            "south": {
+                "model": "roads:road_sign_mandat_4",
+                "y": 180,
+                "uvlock": false
+            },
+            "west": {
+                "model": "roads:road_sign_mandat_4",
+                "y": 270,
+                "uvlock": false
+            }
+        },
+        "down": {
+            "true": {
+                "submodel": {
+                    "post_down": {
+                        "model": "roads:road_sign_connector",
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "up": {
+            "true": {
+                "submodel": {
+                    "post_up": {
+                        "model": "roads:road_sign_connector",
+                        "x": 180,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "north": {
+            "true": {
+                "submodel": {
+                    "post_north": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "south": {
+            "true": {
+                "submodel": {
+                    "post_south": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "y": 180,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "east": {
+            "true": {
+                "submodel": {
+                    "post_east": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "y": 90,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "west": {
+            "true": {
+                "submodel": {
+                    "post_west": {
+                        "model": "roads:road_sign_connector",
+                        "x": 90,
+                        "y": 270,
+                        "uvlock": true
+                    }
+                }
+            },
+            "false": { }
+        },
+        "inventory": [
+            {
+"model": "roads:road_sign_mandat_4", "uvlock": false
+            }
+        ]
+    }
+}
