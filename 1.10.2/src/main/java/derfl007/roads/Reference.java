@@ -1,8 +1,14 @@
 package derfl007.roads;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.text.TextComponentString;
 
 public class Reference {
+	
+	public static void sayDebugChat(EntityPlayer player, String string) {
+		player.addChatMessage(new TextComponentString("[DEBUG]: " + string));
+	}
 	public static final String MOD_ID = "roads";
 	public static final String MOD_NAME = "Road Mod";
 	public static final String VERSION = "1.0.2";
