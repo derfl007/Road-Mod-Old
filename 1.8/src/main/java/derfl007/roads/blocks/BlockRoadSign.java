@@ -112,23 +112,12 @@ public class BlockRoadSign extends BlockDirectional {
 	public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		Block block = iblockstate.getBlock();
-		String blockname = block.getUnlocalizedName().toString();
-		try {
-			if (blockname.substring(5, 20).equals("road_block_sign") || block == RoadBlocks.road_traffic_light
+			if (block.getClass().equals(this.getClass()) || block == RoadBlocks.road_traffic_light
 					|| block == RoadBlocks.road_pedestrian_traffic_light) {
 				return true;
 			} else {
 				return false;
 			}
-		} catch (StringIndexOutOfBoundsException e) {
-			// TODO: handle exception
-			System.out.println("Index out of bounds!");
-			if (block == RoadBlocks.road_traffic_light || block == RoadBlocks.road_pedestrian_traffic_light) {
-				return true;
-			} else {
-				return false;
-			}
-		}
 	}
 
 	protected BlockState createBlockState()
