@@ -106,4 +106,6 @@ tile.road_crosswalk.name=Crosswalk
 tile.road_sidewalk_curb.name=Sidewalk Curb
 tile.road_sign_post.name=Sign Post
 
+roads.gui.town_sign=Please enter the text to display:
+
 itemGroup.tabRoads=Road Mod

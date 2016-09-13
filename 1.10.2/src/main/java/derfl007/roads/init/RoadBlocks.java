@@ -8,6 +8,7 @@ import derfl007.roads.blocks.BlockRoadRotatable;
 import derfl007.roads.blocks.BlockRoadSidewalkCurb;
 import derfl007.roads.blocks.BlockRoadSign;
 import derfl007.roads.blocks.BlockRoadSignPost;
+import derfl007.roads.blocks.BlockRoadTownSign;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -120,7 +121,8 @@ public class RoadBlocks {
 			road_sidewalk_curb, //
 			road_lantern, //
 			road_traffic_light, //
-			road_pedestrian_traffic_light; //
+			road_pedestrian_traffic_light, //
+			road_town_sign;
 
 	public static void init() {
 		road = new BlockRoad("road", "BlockRoad");
@@ -231,6 +233,7 @@ public class RoadBlocks {
 		road_traffic_light = new BlockRoadSign("road_traffic_light", "BlockRoadTrafficLight");
 		road_pedestrian_traffic_light = new BlockRoadSign("road_pedestrian_traffic_light",
 				"BlockRoadPedestrianTrafficLight");
+		road_town_sign = new BlockRoadTownSign("road_town_sign", "BlockRoadTownSign");
 	}
 
 	public static void register() {
@@ -339,6 +342,7 @@ public class RoadBlocks {
 		registerBlock(road_lantern);
 		registerBlock(road_traffic_light);
 		registerBlock(road_pedestrian_traffic_light);
+		registerBlock(road_town_sign);
 	}
 
 	private static void registerBlock(Block block) {
