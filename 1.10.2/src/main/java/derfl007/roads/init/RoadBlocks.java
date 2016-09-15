@@ -8,7 +8,9 @@ import derfl007.roads.blocks.BlockRoadRotatable;
 import derfl007.roads.blocks.BlockRoadSidewalkCurb;
 import derfl007.roads.blocks.BlockRoadSign;
 import derfl007.roads.blocks.BlockRoadSignPost;
+import derfl007.roads.blocks.BlockRoadSlope;
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -21,15 +23,18 @@ public class RoadBlocks {
 			road_white, //
 			road_white_half, //
 			road_white_quarter, //
+			road_slope, //
 			road_line, //
 			road_line_merge, //
 			road_line_double, //
+			road_line_half_double, //
 			road_line_diagonal, //
 			road_arrow_s, //
 			road_arrow_r, //
 			road_arrow_l, //
 			road_arrow_rl, //
-			road_arrow_sr, road_arrow_sl, //
+			road_arrow_sr, //
+			road_arrow_sl, //
 			road_arrow_srl, //
 			road_crosswalk, //
 			road_excl_zone, //
@@ -42,6 +47,8 @@ public class RoadBlocks {
 			road_excl_zone_split_in_l, //
 			road_excl_zone_split_out_r, //
 			road_excl_zone_split_out_l, //
+			road_sidewalk_curb, //
+			road_guardrail, //
 			road_sign_post, //
 			road_sign_prohib_1, // closed in both directions for all vehicles
 			road_sign_prohib_2, // no entry
@@ -116,8 +123,6 @@ public class RoadBlocks {
 			road_sign_info_16a, // detour right
 			road_sign_info_16b, // detour left
 			road_sign_info_23, // two lanes merge into one
-			road_guardrail, //
-			road_sidewalk_curb, //
 			road_lantern, //
 			road_traffic_light, //
 			road_pedestrian_traffic_light; //
@@ -127,9 +132,11 @@ public class RoadBlocks {
 		road_white = new BlockRoad("road", "BlockRoadWhite");
 		road_white_half = new BlockRoadRotatable("road_white_half", "BlockRoadWhiteHalf");
 		road_white_quarter = new BlockRoadRotatable("road_white_quarter", "BlockRoadWhiteQuarter");
+		road_slope = new BlockRoadSlope("road_slope", "BlockRoadSlope");
 		road_line = new BlockRoadLine();
 		road_line_merge = new BlockRoadRotatable("road_line_merge", "BlockRoadLineMerge");
 		road_line_double = new BlockRoadRotatable("road_line_double", "BlockRoadLineDouble");
+		road_line_half_double = new BlockRoadRotatable("road_line_half_double", "BlockRoadLineHalfDouble");
 		road_line_diagonal = new BlockRoadRotatable("road_line_diagonal", "BlockRoadLineDiagonal");
 		road_arrow_s = new BlockRoadRotatable("road_arrow_s", "BlockRoadArrowS");
 		road_arrow_r = new BlockRoadRotatable("road_arrow_r", "BlockRoadArrowR");
@@ -151,6 +158,8 @@ public class RoadBlocks {
 		road_excl_zone_split_in_l = new BlockRoadRotatable("road_excl_zone_split_in_l", "BlockRoadExclZoneSplitInL");
 		road_excl_zone_split_out_r = new BlockRoadRotatable("road_excl_zone_split_out_r", "BlockRoadExclZoneSplitOutR");
 		road_excl_zone_split_out_l = new BlockRoadRotatable("road_excl_zone_split_out_l", "BlockRoadExclZoneSplitOutL");
+		road_sidewalk_curb = new BlockRoadSidewalkCurb();
+		road_guardrail = new BlockRoadGuardrail();
 		road_sign_post = new BlockRoadSignPost();
 		road_sign_prohib_1 = new BlockRoadSign("road_sign_prohib_1", "BlockRoadSignProhib1");
 		road_sign_prohib_2 = new BlockRoadSign("road_sign_prohib_2", "BlockRoadSignProhib2");
@@ -225,8 +234,6 @@ public class RoadBlocks {
 		road_sign_info_16a = new BlockRoadSign("road_sign_info_16a", "BlockRoadSignInfo16a");
 		road_sign_info_16b = new BlockRoadSign("road_sign_info_16b", "BlockRoadSignInfo16b");
 		road_sign_info_23 = new BlockRoadSign("road_sign_info_23", "BlockRoadSignInfo23");
-		road_guardrail = new BlockRoadGuardrail();
-		road_sidewalk_curb = new BlockRoadSidewalkCurb();
 		road_lantern = new BlockRoadLantern();
 		road_traffic_light = new BlockRoadSign("road_traffic_light", "BlockRoadTrafficLight");
 		road_pedestrian_traffic_light = new BlockRoadSign("road_pedestrian_traffic_light",
@@ -238,9 +245,11 @@ public class RoadBlocks {
 		registerBlock(road_white);
 		registerBlock(road_white_half);
 		registerBlock(road_white_quarter);
+		registerBlock(road_slope);
 		registerBlock(road_line);
 		registerBlock(road_line_merge);
 		registerBlock(road_line_double);
+		registerBlock(road_line_half_double);
 		registerBlock(road_line_diagonal);
 		registerBlock(road_arrow_s);
 		registerBlock(road_arrow_r);
@@ -260,6 +269,8 @@ public class RoadBlocks {
 		registerBlock(road_excl_zone_split_in_r);
 		registerBlock(road_excl_zone_split_out_l);
 		registerBlock(road_excl_zone_split_out_r);
+		registerBlock(road_sidewalk_curb);
+		registerBlock(road_guardrail);
 		registerBlock(road_sign_post);
 		registerBlock(road_sign_prohib_1);
 		registerBlock(road_sign_prohib_2);
@@ -334,8 +345,6 @@ public class RoadBlocks {
 		registerBlock(road_sign_info_16a);
 		registerBlock(road_sign_info_16b);
 		registerBlock(road_sign_info_23);
-		registerBlock(road_guardrail);
-		registerBlock(road_sidewalk_curb);
 		registerBlock(road_lantern);
 		registerBlock(road_traffic_light);
 		registerBlock(road_pedestrian_traffic_light);
@@ -353,9 +362,11 @@ public class RoadBlocks {
 		registerRender(road_white);
 		registerRender(road_white_half);
 		registerRender(road_white_quarter);
+		registerRender(road_slope);
 		registerRender(road_line);
 		registerRender(road_line_merge);
 		registerRender(road_line_double);
+		registerRender(road_line_half_double);
 		registerRender(road_line_diagonal);
 		registerRender(road_arrow_s);
 		registerRender(road_arrow_r);
@@ -375,6 +386,8 @@ public class RoadBlocks {
 		registerRender(road_excl_zone_split_in_r);
 		registerRender(road_excl_zone_split_out_l);
 		registerRender(road_excl_zone_split_out_r);
+		registerRender(road_sidewalk_curb);
+		registerRender(road_guardrail);
 		registerRender(road_sign_post);
 		registerRender(road_sign_prohib_1);
 		registerRender(road_sign_prohib_2);
@@ -449,8 +462,6 @@ public class RoadBlocks {
 		registerRender(road_sign_info_16a);
 		registerRender(road_sign_info_16b);
 		registerRender(road_sign_info_23);
-		registerRender(road_guardrail);
-		registerRender(road_sidewalk_curb);
 		registerRender(road_lantern);
 		registerRender(road_traffic_light);
 		registerRender(road_pedestrian_traffic_light);
