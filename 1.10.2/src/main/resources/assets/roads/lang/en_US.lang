@@ -105,5 +105,7 @@ tile.road_excl_zone_split_out_l.name=Exclusion Zone with with splitting Lines (l
 tile.road_crosswalk.name=Crosswalk
 tile.road_sidewalk_curb.name=Sidewalk Curb
 tile.road_sign_post.name=Sign Post
+tile.road_slope.name=Slope
+tile.road_half_double_line=Half Double Line
 
 itemGroup.tabRoads=Road Mod
