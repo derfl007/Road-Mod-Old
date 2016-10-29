@@ -1,6 +1,7 @@
 package derfl007.roads.init;
 
 import derfl007.roads.blocks.BlockRoad;
+import derfl007.roads.blocks.BlockRoadFullRotatable;
 import derfl007.roads.blocks.BlockRoadGuardrail;
 import derfl007.roads.blocks.BlockRoadLantern;
 import derfl007.roads.blocks.BlockRoadLine;
@@ -10,7 +11,6 @@ import derfl007.roads.blocks.BlockRoadSign;
 import derfl007.roads.blocks.BlockRoadSignPost;
 import derfl007.roads.blocks.BlockRoadSlope;
 import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -19,37 +19,38 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class RoadBlocks {
 
-	public static Block road, //
-			road_white, //
-			road_white_half, //
-			road_white_quarter, //
-			road_slope, //
-			road_line, //
-			road_line_merge, //
-			road_line_double, //
-			road_line_half_double, //
-			road_line_diagonal, //
-			road_arrow_s, //
-			road_arrow_r, //
-			road_arrow_l, //
-			road_arrow_rl, //
-			road_arrow_sr, //
-			road_arrow_sl, //
-			road_arrow_srl, //
-			road_crosswalk, //
+	public static Block road, //Road Block
+			road_white, //White block
+			road_white_half, //Half white block
+			road_white_quarter, //Quarter white block
+			road_slope, //Normal slope
+			road_line_slope, //Slope with line
+			road_line, //Single line
+			road_line_merge, //Merge single and double lines
+			road_line_double, //Double Line
+			road_line_half_double, //Half double line
+			road_line_diagonal, //Diagonal Line
+			road_arrow_s, //straight arrow
+			road_arrow_r, //right arrow
+			road_arrow_l, //left arrow
+			road_arrow_rl, //Right- and left arrow
+			road_arrow_sr, //Straight- and right arrow
+			road_arrow_sl, //Straight- and left arrow
+			road_arrow_srl, //Straight-, right- and left arrow
+			road_crosswalk, //Crosswalk
 			road_excl_zone, //
 			road_excl_zone_line, //
 			road_excl_zone_corner_in, //
 			road_excl_zone_corner_out, //
 			road_excl_zone_diagonal_in, //
 			road_excl_zone_diagonal_out, //
-			road_excl_zone_split_in_r, //
+			road_excl_zone_split_in_r, // 
 			road_excl_zone_split_in_l, //
 			road_excl_zone_split_out_r, //
 			road_excl_zone_split_out_l, //
-			road_sidewalk_curb, //
-			road_guardrail, //
-			road_sign_post, //
+			road_sidewalk_curb, //Sidewalk Curbs
+			road_guardrail, //Guardrail
+			road_sign_post, //Sign Post
 			road_sign_prohib_1, // closed in both directions for all vehicles
 			road_sign_prohib_2, // no entry
 			road_sign_prohib_3a, // no left turn
@@ -123,9 +124,9 @@ public class RoadBlocks {
 			road_sign_info_16a, // detour right
 			road_sign_info_16b, // detour left
 			road_sign_info_23, // two lanes merge into one
-			road_lantern, //
-			road_traffic_light, //
-			road_pedestrian_traffic_light; //
+			road_lantern, //Road Lantern
+			road_traffic_light, //Traffic Light
+			road_pedestrian_traffic_light; //Pedestrian Traffic Light
 
 	public static void init() {
 		road = new BlockRoad("road", "BlockRoad");
@@ -133,6 +134,7 @@ public class RoadBlocks {
 		road_white_half = new BlockRoadRotatable("road_white_half", "BlockRoadWhiteHalf");
 		road_white_quarter = new BlockRoadRotatable("road_white_quarter", "BlockRoadWhiteQuarter");
 		road_slope = new BlockRoadSlope("road_slope", "BlockRoadSlope");
+		road_line_slope = new BlockRoadRotatable("road_line_slope", "BlockRoadLineSlope");
 		road_line = new BlockRoadLine();
 		road_line_merge = new BlockRoadRotatable("road_line_merge", "BlockRoadLineMerge");
 		road_line_double = new BlockRoadRotatable("road_line_double", "BlockRoadLineDouble");
@@ -146,7 +148,7 @@ public class RoadBlocks {
 		road_arrow_sl = new BlockRoadRotatable("road_arrow_sl", "BlockRoadArrowSL");
 		road_arrow_srl = new BlockRoadRotatable("road_arrow_srl", "BlockRoadArrowSRL");
 		road_crosswalk = new BlockRoadRotatable("road_crosswalk", "BlockRoadCrosswalk");
-		road_excl_zone = new BlockRoad("road_excl_zone", "BlockRoadExclZone");
+		road_excl_zone = new BlockRoadRotatable("road_excl_zone", "BlockRoadExclZone");
 		road_excl_zone_line = new BlockRoadRotatable("road_excl_zone_line", "BlockRoadExclZoneLine");
 		road_excl_zone_corner_in = new BlockRoadRotatable("road_excl_zone_corner_in", "BlockRoadExclZoneCornerIn");
 		road_excl_zone_corner_out = new BlockRoadRotatable("road_excl_zone_corner_out", "BlockRoadExclZoneCornerOut");
@@ -246,6 +248,7 @@ public class RoadBlocks {
 		registerBlock(road_white_half);
 		registerBlock(road_white_quarter);
 		registerBlock(road_slope);
+		registerBlock(road_line_slope);
 		registerBlock(road_line);
 		registerBlock(road_line_merge);
 		registerBlock(road_line_double);
@@ -363,6 +366,7 @@ public class RoadBlocks {
 		registerRender(road_white_half);
 		registerRender(road_white_quarter);
 		registerRender(road_slope);
+		registerRender(road_line_slope);
 		registerRender(road_line);
 		registerRender(road_line_merge);
 		registerRender(road_line_double);

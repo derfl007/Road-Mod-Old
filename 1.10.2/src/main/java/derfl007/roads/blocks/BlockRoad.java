@@ -21,6 +21,12 @@ public class BlockRoad extends Block {
 	public boolean isFullCube(IBlockState state) {
 		return false;
 	}
+	
+	@Override
+	public boolean isFullBlock(IBlockState state) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {

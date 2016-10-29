@@ -1,4 +1,5 @@
 item.item_tar.name=Tar
+item.item_wrench.name=Wrench
 
 tile.road.name=Road Block
 tile.road_white.name=White Road Block
@@ -89,7 +90,6 @@ tile.road_sign_info_16a.name=Detour right Sign
 tile.road_sign_info_16b.name=Detour left Sign
 tile.road_sign_info_23.name=Two lanes merge into one Sign
 tile.road_guardrail.name=Guardrail
-tile.road_guardrail.name=Guardrail
 tile.road_lantern.name=Lantern
 tile.road_traffic_light.name=Traffic Lights
 tile.road_pedestrian_traffic_light.name=Pedestrian Traffic Lights
@@ -106,5 +106,8 @@ tile.road_excl_zone_split_out_l.name=Exclusion Zone with with splitting Lines (l
 tile.road_crosswalk.name=Crosswalk
 tile.road_sidewalk_curb.name=Sidewalk Curb
 tile.road_sign_post.name=Sign Post
+tile.road_slope.name=Slope
+tile.road_line_slope.name=Slope with Line
+tile.road_line_half_double.name=Half Double Line
 
 itemGroup.tabRoads=Road Mod

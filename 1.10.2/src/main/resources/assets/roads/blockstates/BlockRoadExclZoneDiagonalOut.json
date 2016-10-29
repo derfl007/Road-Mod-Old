@@ -1,29 +1,60 @@
 {
     "forge_marker": 1,
-    "defaults": {
-        "model": "roads:road_excl_zone_base",
-        "uvlock": true
-    },
     "variants": {
+        "slope": {
+            "true":{
+                "model": "roads:road_excl_zone_slope"
+            },
+            "false": {
+                "model": "roads:road_excl_zone"
+            }
+        },
         "facing": {
             "north": {
-                "submodel": "roads:road_excl_zone_diagonal_out",
-                "uvlock": false
-            },
-            "east": {
-                "submodel": "roads:road_excl_zone_diagonal_out",
-                "y": 90,
-                "uvlock": false
+                "y": 180,
+                "textures": {
+                    "excl": "roads:blocks/road_excl_zone_north"
+                }
             },
             "south": {
-                "submodel": "roads:road_excl_zone_diagonal_out",
-                "y": 180,
-                "uvlock": false
+                "y": 0,
+                "textures": {
+                    "excl": "roads:blocks/road_excl_zone_south"
+                }
+            },
+            "east": {
+                "y": 270,
+                "textures": {
+                    "excl": "roads:blocks/road_excl_zone_east"
+                }
             },
             "west": {
-                "submodel": "roads:road_excl_zone_diagonal_out",
-                "y": 270,
-                "uvlock": false
+                "y": 90,
+                "textures": {
+                    "excl": "roads:blocks/road_excl_zone_west"
+                }
+            }
+        },
+        "slope_facing": {
+            "north": {
+                "textures": {
+                    "top": "roads:blocks/road_excl_zone_diagonal_out_north"
+                }
+            },
+            "east": {
+                "textures": {
+                    "top": "roads:blocks/road_excl_zone_diagonal_out_east"
+                }
+            },
+            "south": {
+                "textures": {
+                    "top": "roads:blocks/road_excl_zone_diagonal_out_south"
+                }
+            },
+            "west": {
+                "textures": {
+                    "top": "roads:blocks/road_excl_zone_diagonal_out_west"
+                }
             }
         }
     }

@@ -252,13 +252,11 @@ public class BlockRoadSlope extends Block {
     
     @Override
     public boolean isFullBlock(IBlockState state) {
-    	// TODO Auto-generated method stub
     	return false;
     }
     
     @Override
     public BlockRenderLayer getBlockLayer() {
-    	// TODO Auto-generated method stub
     	return BlockRenderLayer.CUTOUT;
     }
     

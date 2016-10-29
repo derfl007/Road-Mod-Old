@@ -4,7 +4,8 @@
         "particle": "roads:blocks/road",
         "0": "roads:blocks/road",
         "1": "roads:blocks/road_slope_right",
-        "2": "roads:blocks/road_slope_left"
+        "2": "roads:blocks/road_slope_left",
+        "top": "roads:blocks/road"
     },
     "elements": [
         {
@@ -69,8 +70,8 @@
                 "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
                 "south": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
                 "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
-                "up": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+                "up": { "texture": "#top", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "down": { "texture": "#top", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
             }
         }
     ]
