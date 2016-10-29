@@ -2,77 +2,35 @@
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
         "0": "roads:blocks/road",
-        "1": "roads:blocks/road_excl_zone",
+        "excl": "roads:blocks/road_excl_zone",
+        "top": "roads:blocks/road",
         "particle": "roads:blocks/road"
     },
     "elements": [
         {
             "name": "Cube",
-            "from": [
-                0,
-                0,
-                0
-            ],
-            "to": [
-                16,
-                12.9,
-                16
-            ],
+            "from": [ 0, 0, 0 ],
+            "to": [ 16, 13, 16 ],
             "faces": {
-                "north": {
-                    "texture": "#0",
-                    "uv": [
-                        0,
-                        0,
-                        16,
-                        13
-                    ]
-                },
-                "east": {
-                    "texture": "#0",
-                    "uv": [
-                        0,
-                        0,
-                        16,
-                        13
-                    ]
-                },
-                "south": {
-                    "texture": "#0",
-                    "uv": [
-                        0,
-                        0,
-                        16,
-                        13
-                    ]
-                },
-                "west": {
-                    "texture": "#0",
-                    "uv": [
-                        0,
-                        0,
-                        16,
-                        13
-                    ]
-                },
-                "up": {
-                    "texture": "#1",
-                    "uv": [
-                        0,
-                        0,
-                        16,
-                        16
-                    ]
-                },
-                "down": {
-                    "texture": "#0",
-                    "uv": [
-                        0,
-                        0,
-                        16,
-                        16
-                    ]
-                }
+                "north": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "east": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "south": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "west": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "up": { "texture": "#excl",  "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#excl",  "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0, 13, 0 ],
+            "to": [ 16, 13, 16 ],
+            "faces": {
+                "north": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "east": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "south": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "west": { "texture": "#0",  "uv": [ 0, 0, 16, 13 ] },
+                "up": { "texture": "#top",  "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#top",  "uv": [ 0, 0, 16, 16 ] }
             }
         }
     ]

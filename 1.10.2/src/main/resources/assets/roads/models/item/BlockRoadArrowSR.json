@@ -1,22 +1,48 @@
 {
-    "parent": "block/cube_all",
+    "parent": "roads:block/road",
     "textures": {
-        "0": "roads:blocks/road",
-        "1": "roads:blocks/road_arrow_sr"
+        "top": "roads:blocks/road_arrow_sr"
     },
-    "elements": [
-        {
-            "name": "Cube",
-            "from": [ 0.0, 0.0, 0.0 ], 
-            "to": [ 16.0, 13.0, 16.0 ], 
-            "faces": {
-                "north": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 13.0 ] },
-                "east": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 13.0 ] },
-                "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 13.0 ] },
-                "west": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 13.0 ] },
-                "up": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-                "down": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
-            }
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0.00, 0.00, -3.00 ],
+            "scale": [ 0.50, 0.50, 0.50 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0.00, 0.00, 0.00 ],
+            "scale": [ 1.00, 1.00, 1.00 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 24, 0 ],
+            "translation": [ 0.00, 0.00, -2.00 ],
+            "scale": [ 0.50, 0.50, 0.50 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 24, 0 ],
+            "translation": [ 0.00, 0.00, 0.00 ],
+            "scale": [ 0.50, 0.50, 0.50 ]
+        },
+        "gui": {
+            "rotation": [ -150, 135, 180 ],
+            "translation": [ -0.00, 0.00, 0.00 ],
+            "scale": [ 0.62, 0.62, 0.63 ]
+        },
+        "head": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0.00, 0.00, 0.00 ],
+            "scale": [ 1.00, 1.00, 1.00 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0.00, 0.00, 0.00 ],
+            "scale": [ 1.00, 1.00, 1.00 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0.00, 0.00, 0.00 ],
+            "scale": [ 0.70, 0.70, 0.70 ]
         }
-    ]
+    }
 }

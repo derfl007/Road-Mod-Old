@@ -1,4 +1,5 @@
 item.item_tar.name=Teer
+item.item_wrench.name=Schraubenschlüssel
 
 tile.road.name=Straßenblock
 tile.road_white.name=Weißer Straßenblock
@@ -104,5 +105,8 @@ tile.road_excl_zone_split_out_l.name=Speerzone mit gespaltenen Linien (links au�
 tile.road_crosswalk.name=Zebrastreifen
 tile.road_sidewalk_curb.name=Gehsteig
 tile.road_sign_post.name=Schildstange
+tile.road_slope.name=Rampe
+tile.road_line_slope.name=Rampe mit Linie
+tile.road_line_half_double.name=Straßenblock mit halber Doppelinie
 
 itemGroup.tabRoads=Road Mod
